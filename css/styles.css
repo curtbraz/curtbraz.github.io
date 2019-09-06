@@ -1,0 +1,211 @@
+/* General Style Cleanup */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ul, ol, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:Cooper Black; vertical-align:baseline;
+}
+:focus{outline:0;}
+body{line-height:1; background:#fff; min-width:320px}
+ol,ul{list-style:none;}
+blockquote:before, blockquote:after, q:before, q:after{content:"";}
+blockquote, q{quotes:"" "";}
+a{color:#0BB8FF; text-decoration:none;}
+button{border:none; padding:0; background:none; cursor:pointer}
+
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+/* Main Layout */
+#headerHolder{width:100%; background:#333;}
+#header{position:relative; width:100%; background:#333; max-width:1280px; margin:0 auto}
+#logo{display:block; float:left; height:50px; width:240px; background:#333 url("../img/logoa.png") no-repeat top left; background-size:240px 50px}
+#blueline{height:2px; width:100%; background:#0BB8FF}
+#sliderHolder{position:relative; width:100%; height:180px; background:#000;}
+#slider{left:0px; width:100%; height:180px; overflow:hidden}
+.r3{color:#fff; display:block; position:absolute; top:25px; left:70%; font-size:1.2em; font-family: 'Teko', sans-serif; text-shadow: 1px 1px 1px rgba(0,0,0,.5); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;} 
+.l2{color:#58585A; display:block; position:absolute; top:40px; left:40%; font-size:1.2em; font-family: 'Teko', sans-serif; text-shadow: 1px 1px 1px rgba(0,0,0,.5); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;} 
+.r4{color:#000000; display:block; position:absolute; top:25px; left:60%; font-size:1.5em; font-family: 'Teko', sans-serif; text-shadow: 1px 1px 1px rgba(0,0,0,.5); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+.r5{color:#000000; display:block; position:absolute; top:35px; left:70%; font-size:1.2em; font-family: 'Cooper Black'; text-shadow: 1px 1px 1px rgba(0,0,0,.5); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+#bodyHolder{width:100%; background:#fff;}
+#body{width:100%; max-width:1280px; margin:0 auto; padding:0 0 50px 0;}
+#videoHolder{clear:both; width:100%; background:#fff;}
+#video{background:#bbb; height:486px; width:100%; max-width:1280px; margin:0px auto}
+
+/* footer */
+#footerHolder{clear:both; width:100%; background:#333;}
+#footer{line-height:1.5em; width:100%; max-width:1280px; color:#fff; text-align:center; margin:0 auto}
+#footer-left{float:left; width:30%; text-align:left; margin:50px 0 0 10%}
+#footer-right{color:#999; width:50%; float:right; margin:50px 10% 0 0}
+#footer-bottom{color:#999; padding:50px 0; clear:both; font-size:0.75em}
+#footer-address{float:right; text-align:left;}
+#footer i{color:#0BB8FF}
+
+/* home */
+.col{display:block; float:left; width:100%; padding:0 0 25px 0; background:#fff}
+.col-odd{display:block; float:left; width:100%; padding:0 0 25px 0; background:#fff}
+.col-1{display:block; float:left; width:75px; padding:12px 0 0 25px; background:#ccc;}
+.col-2{width:100%; text-align:left; color:#000; background:#ccc; padding:10px 0 0 0; border-bottom:3px solid #0BB8FF;}
+
+/* setup steps */
+#progress{width:100%; max-width:1000px; margin:5px auto; clear:both}
+.step{display:block; float:left; width:20%; max-width:200px; height:auto;}
+#controls{clear:both; width:100%; text-align:center; margin:25px 0 50px 0;}
+#imready{clear:both; width:100%; text-align:center; margin:25px 0 50px 0; display:none}
+#install{clear:both; width:100%; text-align:center; margin:25px 0 50px 0; display:none}
+
+
+/* BUILDING */
+#overlay{display:none; position:fixed; top:0px; left:0px; width:100%; height:100%; background:rgba(0,0,0,0.7);}
+#building{position:relative; width:300px; height:120px; margin:0 auto; text-align:center; background:#333; border-radius:10px; border:2px solid #999;}
+
+/* Styles */
+h1{display:block; font-family:'Teko', sans-serif; font-size:2em; padding:10px 0 10px 0}
+.home{font-size:3em}
+h2{font-family:'Teko', sans-serif; font-size:1.5em; color:#0BB8FF; padding:5px 0 10px 0; line-height:1em}
+p{clear:both; padding:25px 25px 25px 25px; line-height:1.5em; color:#999; margin:0 0 25px 0}
+i{color:#0BB8FF}
+.imgRound{display:block; width:50px; height:50px; -moz-border-radius:25px; -webkit-border-radius:25px; -khtml-border-radius:25px; border-radius:25px; background:#fff}
+.heading{color:#0BB8FF; width:100%; text-align:center; padding:25px 0 0 0;}
+.btn{border=0; font-size:2em; font-family:'Teko', sans-serif; color:#fff; background:#0BB8FF; padding:10px 20px 5px 20px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; border-radius:5px;}
+.btnIcon{color:#fff;}
+.imgleft{display:block; float:left; margin:0 25px 0 0;}
+.bold{font-weight:bold; color:#000}
+.important{margin:0 25px 25px 25px; background:#eee; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px;}
+.scrollbox{max-height:100px; overflow-y:scroll; font-family:"Times New Roman","serif"; margin:0 25px 25px 25px; padding:25px; background:#eee; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px;}
+.center{display:block; margin:0 auto;}
+.small{font-Size:0.75em; line-height:1.25em;}
+.noselect{-webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+.leftspace{padding-left:35px;}
+
+/* Navigation */
+li a{color:#fff; display:block; padding:15px 10%; border-top:1px solid #0BB8FF; text-decoration:none}
+li a:hover{background:#666}
+.navActive{background:#000; pointer-events:none; cursor:default;}
+#menu-toggle{position:relative; float:right; top:7px; right:15px; display:block; color:#0BB8FF; font-size:2em;}
+#menu{clear:both; display:block; height:0px; font-size:1em; overflow:hidden;
+-webkit-transition:height 0.5s ease-out; -moz-transition:height 0.5s ease-out; -ms-transition:height 0.5s ease-out; -o-transition:height 0.5s ease-out; transition:height 0.5s ease-out;
+}
+
+/* Slides */
+#slide1{position:absolute; top:0px; left:0px; width:100%; height:100%; background:#FFF url("../img/slide1a.jpg") no-repeat center left; background-size:100% auto}
+#slide2{position:absolute; top:0px; left:0px; width:100%; height:100%; background:#FFF url("../img/slide2a.jpg") no-repeat center left; background-size:100% auto}
+#slide3{position:absolute; top:0px; left:0px; width:100%; height:100%; background:#FFF url("../img/slide3a.jpg") no-repeat center left; background-size:100% auto}
+#slide4{position:absolute; top:0px; left:0px; width:100%; height:100%; background:#FFF url("../img/slide4a.jpg") no-repeat center left; background-size:100% auto}
+
+/* form elements */
+#formHolder{width:320px; margin:0 auto; color:#999; font-size:1em; line-height:1em;}
+select{font-size:1.5em; width:100%; border:2px solid #0BB8FF; margin:10px 0;}
+input, textarea, select, button{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+select{padding:5px 10px}
+option{padding:0 10px}
+input[type="checkbox"]{display:none;}
+input[type="checkbox"]+label span{display:inline-block; width:19px; height:19px; margin:-1px 4px 0 0; vertical-align:middle; background:url(../img/check_radio_sheet.png) left top no-repeat; cursor:pointer;}
+input[type="checkbox"]:checked+label span{background:url(../img/check_radio_sheet.png) -19px top no-repeat;}
+label{color:#000; font-size:1em; margin:0 0 0 10px}
+input{font-size:1em; width:100%; border:2px solid #0BB8FF; margin:5px 0 10px 0; padding:5px 10px; height:50px}
+
+
+/* encryption */
+#cipherHolder{display:none}
+#passwordHolder{display:none}
+#errors{color:#ff0000; font-size:0.75em}
+#errors i{color:#ff0000}
+
+/* FAQ */
+.questionHolder{display:block; padding:15px 15px; cursor:pointer; margin:0 25px 25px 25px; background:#eee; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px;
+}
+.question{display:block; float:left; font-family:'Teko', sans-serif; font-size:1.5em; color:#58585A; width:85%}
+.answer{font-size:1em; line-height:1.5em; color:#000; overflow:hidden; max-height:0px; clear:both; 
+	-webkit-transition:max-height 0.5s ease-out; -moz-transition:max-height 0.5s ease-out; -ms-transition:max-height 0.5s ease-out; -o-transition:max-height 0.5s ease-out; transition:max-height 0.5s ease-out;
+}
+.faq-toggle{float:right; font-size:1.5em;}
+#a1close, #a2close, #a3close, #a4close, #a5close, #a6close, #a7close, #a8close, #a9close, #a10close, #a11close, #a12close, #a13close, #a14close, #a15close, #a16close, #a17close, #a18close, #a19close, #a20close, #a21close, #a22close, #a23close, #a24close, #a25close, #a26close, #a27close, #a28close, #a29close, #a30close, #a31close, #a32close, #a33close, #a34close, #a35close, #a36close, #a37close, #a38close, #a39close, #a40close, #a41close, #a42close, #a43close, #a44close, #a45close, #a46close, #a47close{display:none;}
+
+/* Media Queries */
+@media all and (min-width: 640px) and (max-width: 1023px){
+	p{font-size:1.25em}
+	h1{font-size:3em;}
+	h2{font-size:2em;}
+	#slide1{background:#FFF url("../img/slide1b.jpg") no-repeat center left; background-size:100% auto}
+	#slide2{background:#FFF url("../img/slide2b.jpg") no-repeat center left; background-size:100% auto}
+	#slide3{background:#FFF url("../img/slide3b.jpg") no-repeat center left; background-size:100% auto}
+        #slide4{background:#FFF url("../img/slide4b.jpg") no-repeat center left; background-size:100% auto}
+	.r3{top:50px; left:75%; font-size:2.0em;} 
+	.l2{top:25px; left:40%; font-size:2.0em;} 
+        .r4{top:65px; left:60%; font-size:1.0em;} 
+        .r5{top:65px; left:70%; font-size:2.0em;} 
+	#header{overflow:hidden;}
+	.col{width:50%}
+	.col-odd{width:100%}
+	.col-1{display:block; width:100%; padding:25px 0 10px 0}
+	.col-2{text-align:center;}
+	.imgRound{display:block; width:80px; height:80px; margin:0 auto; -moz-border-radius: 50px; -webkit-border-radius: 50px; -khtml-border-radius: 50px; border-radius: 50px;}
+	li a{border:none; width:auto; padding:17px 10px; float:left; }
+	li{float:left}
+	#menu{font-size:1.25em; display:block; position:absolute; top:0px; right:15px;}
+	#sliderHolder{height:300px;}
+	#slider{height:300px;}
+	#footer{font-size:1.25em}
+	#footer-left{width:20%; margin:50px 0 0 20%}
+	#footer-right{width:40%; margin:50px 20% 0 0}
+	#formHolder{width:500px; font-size:1.25em; line-height:1.25em;}
+	input[type="text"]{font-size:1.5em;}
+	label{font-size:1.25em;}
+}
+
+@media all and (min-width: 1024px){
+	p{font-size:1.5em}
+	h1{font-size:3em;}
+	h2{font-size:2em;}
+	#slide1{background:#FFF url("../img/slide1b.jpg") no-repeat center left; background-size:100% auto}
+	#slide2{background:#FFF url("../img/slide2b.jpg") no-repeat center left; background-size:100% auto}
+	#slide3{background:#FFF url("../img/slide3b.jpg") no-repeat center left; background-size:100% auto}
+        #slide4{background:#FFF url("../img/slide4b.jpg") no-repeat center left; background-size:100% auto}
+	.r3{top:50px; left:85%; font-size:2.5em;} 
+	.l2{top:100px; left:40%; font-size:4.0em;} 
+        .r4{top:40px; left:70%; font-size:4.5em;} 
+        .r5{top:120px; left:70%; font-size:2.5em;} 
+	#header{overflow:hidden;}
+	.col{width:33.3%;}
+	.col-odd{width:33.3%;}
+	.col-1{display:block; width:100%; padding:25px 0 10px 0}
+	.col-2{text-align:center;}
+	#logo{height:75px; width:350px; background:#333 url("../img/logob.png") no-repeat top left; background-size:350px 75px}
+	li a{border:none; width:auto; padding:27px 25px; float:left}
+	li{float:left}
+	#menu{font-size:1.5em; display:block; position:absolute; top:0px; right:15px}
+	#sliderHolder{height:500px}
+	#slider{height:500px}
+	.imgRound{display:block; width:150px; height:150px; margin:0 auto; -moz-border-radius:100px; -webkit-border-radius:100px; -khtml-border-radius:100px;border-radius:100px;}
+	#footer{font-size:1.5em}
+	#footer-left{width:15%; margin:50px 0 0 25%}
+	#footer-right{width:35%; margin:50px 25% 0 0}
+	#formHolder{width:500px; font-size:1.25em; line-height:1.25em;}
+	input[type="text"]{font-size:1.5em;}
+	label{font-size:1.25em;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
