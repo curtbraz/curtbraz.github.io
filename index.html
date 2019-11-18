@@ -81,33 +81,13 @@
 		
 		<!--<br><center><a href="https://www.amazon.com/gp/product/0578519321?pf_rd_p=183f5289-9dc0-416f-942e-e8f213ef368b&pf_rd_r=2ERJYT4J6Z1M0P0AVHDY?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=storypodca-20&linkId=2P4S6EY6B462X4AR" target="_blank" rel="noopener noreferrer" style="border:none;text-decoration:none"><img src="https://www.niftybuttons.com/amazon/amazon-button9.png"></a></p>-->
 			
-			<center><div id="paypal-button-container"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AVn6ybBtsGODmshQQ46BebGGJzut1FPTGmvgldYZkNV5kZbRF0eQvxzJF43cpvKcwHxZYaUUbX9PPinP&currency=USD" data-sdk-integration-source="button-factory"></script>
-<script>
-    paypal.Buttons({
-        style: {
-            shape: 'pill',
-            color: 'blue',
-            layout: 'vertical',
-            label: 'buynow',
-            
-        },
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '1'
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name + '!');
-            });
-        }
-    }).render('#paypal-button-container');
-</script>
+		<center><div><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="97SCDLQRH3RYA">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
 
 				
 				<br>For bulk orders (100+) please <a href="mailto:curtbraz@gmail.com">email me</a> for a discounted rate!</center></p>
