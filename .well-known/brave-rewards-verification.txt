@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: misformalware.com
+Token: 3ed15fd710f2140b8ba2f4d070965d33c3117538e416a1e75a1f36aca3d26fdd
