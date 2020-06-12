@@ -1,28 +1,148 @@
 <center>
 <h3>For Non-US Shipping Addresses Only</h3>
 <b>May take several weeks or more to arrive after shipping, due to Coronavirus delays!</b><br><br>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
-<b>Quantity:</b> <select id="totalcost" name="quantity"  onchange="GetSelectedTextValue(this)">
+<input type="hidden" name="hosted_button_id" value="Z68F4DRRVRPNG">
+<input type="hidden" name="upload" value="1">
+<table>
+	<tr><td align="center"><input type="hidden" name="on0" value="Book"><b>Select Book</b><br></td></tr>
+
+	<tr><td align="center">
+	<select name="os0" id="changecover" onchange="GetSelectedTextValue2(this)">
+	<option value="M is for Malware">M is for Malware </option>
+
+<!-- EASTER EGG TEASER!! SHHHH! :) -->
+		
+	<!--	<option value="R is for Red Team">R is for Red Team </option>
+	<option value="B is for Blue Team">B is for Blue Team </option>-->
+
+</select><br><br></td></tr>
+<!--	<tr><td><b>To Add More Than One Book "Add to Cart" and Then Switch Tabs or "Go Back" in Your Browser</b></td></tr>-->
+<tr><td align="center"><div id="cover"><img src="https://misformalware.com/img/smallmalware.jpg"></div></td></tr>
+
+	<tr><td align="center"><input type="hidden" name="on1" value="Quantity"><b>Quantity</b></td></tr><tr><td align="center">
+	<select id="totalcost" name="quantity"  onchange="GetSelectedTextValue(this)">
 <option value="1">1 Book</option>
 <option value="2">2 Books</option>
 <option value="3">3 Books</option>
 <option value="4">4 Books</option>
 <option value="5">5 Books</option>
 <option value="6">6 Books</option>
-</select>
-<div id="price">$14.99 USD + Shipping</div>
-<script type="text/javascript">
+<option value="7">7 Books</option>
+<option value="8">8 Books</option>
+<option value="9">9 Books</option>
+<option value="10">10 Books</option>
+<option value="11">11 Books</option>
+<option value="12">12 Books</option>
+<option value="13">13 Books</option>
+<option value="14">14 Books</option>
+<option value="15">15 Books</option>
+<option value="16">16 Books</option>
+<option value="17">17 Books</option>
+<option value="18">18 Books</option>
+<option value="19">19 Books</option>
+<option value="20">20 Books</option>
+<option value="21">21 Books</option>
+<option value="22">22 Books</option>
+<option value="23">23 Books</option>
+<option value="24">24 Books</option>
+<option value="25">25 Books</option>
+<option value="26">26 Books</option>
+<option value="27">27 Books</option>
+<option value="28">28 Books</option>
+<option value="29">29 Books</option>
+<option value="30">30 Books</option>
+<option value="31">31 Books</option>
+<option value="32">32 Books</option>
+<option value="33">33 Books</option>
+<option value="34">34 Books</option>
+<option value="35">35 Books</option>
+<option value="36">36 Books</option>
+<option value="37">37 Books</option>
+<option value="38">38 Books</option>
+<option value="39">39 Books</option>
+<option value="40">40 Books</option>
+<option value="41">41 Books</option>
+<option value="42">42 Books</option>
+<option value="43">43 Books</option>
+<option value="44">44 Books</option>
+<option value="45">45 Books</option>
+<option value="46">46 Books</option>
+<option value="47">47 Books</option>
+<option value="48">48 Books</option>
+<option value="49">49 Books</option>
+<option value="50">50 Books</option>
+<option value="51">51 Books</option>
+<option value="52">52 Books</option>
+<option value="53">53 Books</option>
+<option value="54">54 Books</option>
+<option value="55">55 Books</option>
+<option value="56">56 Books</option>
+<option value="57">57 Books</option>
+<option value="58">58 Books</option>
+<option value="59">59 Books</option>
+<option value="60">60 Books</option>
+<option value="61">61 Books</option>
+<option value="62">62 Books</option>
+<option value="63">63 Books</option>
+<option value="64">64 Books</option>
+<option value="65">65 Books</option>
+<option value="66">66 Books</option>
+<option value="67">67 Books</option>
+<option value="68">68 Books</option>
+<option value="69">69 Books</option>
+<option value="70">70 Books</option>
+<option value="71">71 Books</option>
+<option value="72">72 Books</option>
+<option value="73">73 Books</option>
+<option value="74">74 Books</option>
+<option value="75">75 Books</option>
+<option value="76">76 Books</option>
+<option value="77">77 Books</option>
+<option value="78">78 Books</option>
+<option value="79">79 Books</option>
+<option value="80">80 Books</option>
+</select> </td></tr>
+</table><br>
+<div id="price">$14.99 + Shipping</div>
+	<script type="text/javascript">
         function GetSelectedTextValue(totalcost) {
             var selectedText = totalcost.options[totalcost.selectedIndex].innerHTML;
             var selectedValue = totalcost.value;
-            document.getElementById("price").innerHTML = "$" + totalcost.value * 14.99 + " USD + Shipping";
+            document.getElementById("price").innerHTML = "$" + totalcost.value * 14.99 + " + Shipping";
 
         }
     </script>  
-<br><br>
-        <h2>UPDATE: I will have to stop accepting international orders on 6/07, so please share with peers!</h2><br><br>
-<input type="hidden" name="hosted_button_id" value="L3XP8HC5G2USN">
-<input type="image" src="/img/paypalbutton.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" width="30%">
+<script type="text/javascript">
+        function GetSelectedTextValue2(changecover) {
+            var selectedText2 = changecover.options[changecover.selectedIndex].innerHTML;
+            var selectedValue2 = changecover.value;
+			if (selectedValue2 == "M is for Malware") {
+			var imgsrc = "<br><h2>PREORDER ONLY!</h2>(No Guarantees, but Expecting Inventory Before End of 2021)<br><br><img src='https://misformalware.com/img/smallmalware.jpg'>";
+			}
+			if (selectedValue2 == "B is for Blue Team") {
+			var imgsrc = "<br><h2>PREORDER ONLY!</h2>(No Guarantees, but Expecting Inventory Before End of 2021)<br><br><img src='https://misformalware.com/img/smallblueteam.jpg'>";
+			}
+			if (selectedValue2 == "R is for Red Team") {
+			var imgsrc = "<br><h2>PREORDER ONLY!</h2>(No Guarantees, but Expecting Inventory Before End of 2021)<br><br><img src='https://misformalware.com/img/smallredteam.jpg'>";
+			}
+			
+            document.getElementById("cover").innerHTML = imgsrc;
+
+            var selectedText = totalcost.options[totalcost.selectedIndex].innerHTML;
+            var selectedValue = totalcost.value;
+            document.getElementById("price").innerHTML = "$14.99 + Shipping";
+			document.getElementById("totalcost").innerHTML = '<option value="1">1 Book</option><option value="2">2 Books</option><option value="3">3 Books</option><option value="4">4 Books</option><option value="5">5 Books</option><option value="6">6 Books</option><option value="7">7 Books</option><option value="8">8 Books</option><option value="9">9 Books</option><option value="10">10 Books</option><option value="11">11 Books</option><option value="12">12 Books</option><option value="13">13 Books</option><option value="14">14 Books</option><option value="15">15 Books</option><option value="16">16 Books</option><option value="17">17 Books</option><option value="18">18 Books</option><option value="19">19 Books</option><option value="20">20 Books</option><option value="21">21 Books</option><option value="22">22 Books</option><option value="23">23 Books</option><option value="24">24 Books</option><option value="25">25 Books</option><option value="26">26 Books</option><option value="27">27 Books</option><option value="28">28 Books</option><option value="29">29 Books</option><option value="30">30 Books</option><option value="31">31 Books</option><option value="32">32 Books</option><option value="33">33 Books</option><option value="34">34 Books</option><option value="35">35 Books</option><option value="36">36 Books</option><option value="37">37 Books</option><option value="38">38 Books</option><option value="39">39 Books</option><option value="40">40 Books</option><option value="41">41 Books</option><option value="42">42 Books</option><option value="43">43 Books</option><option value="44">44 Books</option><option value="45">45 Books</option><option value="46">46 Books</option><option value="47">47 Books</option><option value="48">48 Books</option><option value="49">49 Books</option><option value="50">50 Books</option><option value="51">51 Books</option><option value="52">52 Books</option><option value="53">53 Books</option><option value="54">54 Books</option><option value="55">55 Books</option><option value="56">56 Books</option><option value="57">57 Books</option><option value="58">58 Books</option><option value="59">59 Books</option><option value="60">60 Books</option><option value="61">61 Books</option><option value="62">62 Books</option><option value="63">63 Books</option><option value="64">64 Books</option><option value="65">65 Books</option><option value="66">66 Books</option><option value="67">67 Books</option><option value="68">68 Books</option><option value="69">69 Books</option><option value="70">70 Books</option><option value="71">71 Books</option><option value="72">72 Books</option><option value="73">73 Books</option><option value="74">74 Books</option><option value="75">75 Books</option><option value="76">76 Books</option><option value="77">77 Books</option><option value="78">78 Books</option><option value="79">79 Books</option><option value="80">80 Books</option>';
+			reset(document.getElementById("totalcost"));
+        }
+    </script>  
+	<br><br>
+For more than 80 books please <a href="mailto:d81f2140@opayq.com">Email Me</a> for a custom quote!<br>
+
+<br>
+<br>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form></center>
+</form>
+</CENTER>
