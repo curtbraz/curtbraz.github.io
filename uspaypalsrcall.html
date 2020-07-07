@@ -1,3 +1,182 @@
+<HEAD>
+<style>
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 33%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  background-color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  color: black;
+  font-size: 22px;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</HEAD>
 <BODY>
 <CENTER>
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -10,15 +189,12 @@
 	<tr><td align="center">
 	<select name="os0" id="changecover" onchange="GetSelectedTextValue2(this)">
 	<option value="M is for Malware">M is for Malware </option>
-
-<!-- EASTER EGG TEASER/SPOILER!! SHHHH! :) 
-	
 	<option value="R is for Red Team">R is for Red Team </option>
-	<option value="B is for Blue Team">B is for Blue Team </option> -->
+	<option value="B is for Blue Team">B is for Blue Team </option>
 
 </select><br><br></td></tr>
-<!--<tr><td><b>To Add More Than One Book "Add to Cart" and Then Hit "Continue Shopping" on the PayPal Cart Page</b><br><br></td></tr>-->
-<tr><td align="center"><div id="cover"><br><h2>Currently In Stock! (< 10 left)</h2><br><br><img src="https://misformalware.com/img/smallmalware.jpg"></div></td></tr>
+<tr><td><b>To Add More Than One Book "Add to Cart" and Then Hit "Continue Shopping" on the PayPal Cart Page</b><br><br></td></tr>
+<tr><td align="center"><div id="cover"><h2>PREORDER ONLY!</h2>(No guarantees, but estimating delivery around the end of 2020)<br><br><img src="img/smallmalware.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div></td></tr>
 
 	<tr><td align="center"><input type="hidden" name="on1" value="Quantity"><b>Quantity</b></td></tr><tr><td align="center">
 	<select id="totalcost" name="quantity"  onchange="GetSelectedTextValue(this)">
@@ -118,13 +294,13 @@
             var selectedText2 = changecover.options[changecover.selectedIndex].innerHTML;
             var selectedValue2 = changecover.value;
 			if (selectedValue2 == "M is for Malware") {
-			var imgsrc = "<br><h2>Currently In Stock! (< 10 left)</h2><br><br><img src='https://misformalware.com/img/smallmalware.jpg'>";
+			var imgsrc = "<h2>PREORDER ONLY!</h2>(No guarantees, but estimating delivery around the end of 2020)<br><br><img src='img/smallmalware.jpg' onclick='openModal();currentSlide(1)' class='hover-shadow'>";
 			}
 			if (selectedValue2 == "B is for Blue Team") {
-			var imgsrc = "<br><h2>PREORDER ONLY!</h2>(No guarantees, but estimating delivery around the end of 2020)<br><br><img src='https://misformalware.com/img/smallblueteam.jpg'>";
+			var imgsrc = "<h2>PREORDER ONLY!</h2>(No guarantees, but estimating delivery around the end of 2020)<br><br><img src='img/smallblueteam.jpg' onclick='openModal();currentSlide(2)' class='hover-shadow'>";
 			}
 			if (selectedValue2 == "R is for Red Team") {
-			var imgsrc = "<br><h2>PREORDER ONLY!</h2>(No Guarantees, but estimating delivery around the end of 2020)<br><br><img src='https://misformalware.com/img/smallredteam.jpg'>";
+			var imgsrc = "<h2>PREORDER ONLY!</h2>(No guarantees, but estimating delivery around the end of 2020)<br><br><img src='img/smallredteam.jpg' onclick='openModal();currentSlide(3)' class='hover-shadow'>";
 			}
 			
             document.getElementById("cover").innerHTML = imgsrc;
@@ -144,6 +320,53 @@ For more than 80 books please <a href="mailto:d81f2140@opayq.com">Email Me</a> f
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/MalwareLarge.png" style="width:80%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="img/BlueTeamLarge.png" style="width:80%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/RedTeamLarge.png" style="width:80%">
+    </div>
+
+
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="img/smallmalware.jpg" onclick="currentSlide(1)" alt="M is for Malware - This book covers a broad area of Cybersecurity concepts! (The Original)">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img/smallblueteam.jpg" onclick="currentSlide(2)" alt="B is for Blue Team - This book is more focused on defensive security concepts!">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img/smallredteam.jpg" onclick="currentSlide(3)" alt="R is for Red Team - This book is more focused on offensive security concepts!">
+    </div>
+
+  </div>
+</div>
+
 </CENTER>
 </BODY>
 </HTML>
