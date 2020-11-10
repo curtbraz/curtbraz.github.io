@@ -97,52 +97,52 @@
 </p>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="A"></a>Authentication Bypass</p>
-<p></p><br>
+<p>Bypassing authentication is a technique used by the Red Team to gain unauthorized access into an application or environment. An example of this may be a SQL Injection vulnerability that allows access without needing an account. This Red Team robot is accessing a panel for the Blue Team dragon's drawbridge and bypassing the need for a valid PIN to gain access. This panel hacking concept was inspired by a certain space droid.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="B"></a>Brute Force</p>
-<p></p><br>
+<p>A Brute Force attack is a technique used by the Red Team to gain access by trying multiple combinations of credentials over a period of time. Unlike a dictionary attack or rainbow table, brute forcing iterates through all possible combinations throughout a specified keyspace. The Red Team commonly uses bruce forcing techniques for cracking hashes and for authentication. This droid, also inspired by a certain space droid, is attempting to use brute force to knock down the Blue Team's castle door with a battering ram.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="C"></a>Command and Control</p>
-<p></p><br>
+<p>Command and Control servers (C2) are services run by the Red Team that provide a framework to receive and transmit data and commands between an agent on an compromised host and the Red Team's host. Although C2 servers can be internal, they are often external and work in a way in which the agent reaches outbound to check-in, run commands issued, and submits results to the C2. This is done since NAT doesn't typically allow for direct connections from the C2 to the agent. In this illustration, astronauts are the agents who are checking in with the control center on Earth, ready to receive their instructions on what to do next.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="D"></a>Drop Box</p>
-<p></p><br>
+<p>Drop boxes are physical devices left behind by the Red Team during a physical security assessment. Once on-site, a device which is often obfuscated to look like a power adapter or something that belongs in the environment, is left behind and establishes a network connection which bridges the internal corporate network and the Red Team's servers. This gives remote access to the internal environment for additional activities, such as lateral movement, privilege escalation, or informaiton gathering. This image shows the Red Team robot who impersonated a dragon (see Impersonation) sneaking under a Blue Team conference table in the castle and plugging in a drop box designed to look like a mouse. The tail in plugged into an ethernet jack next to a speaker phone on the floor.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="E"></a>Evasion</p>
-<p></p><br>
+<p>Evasion is another technique used by the Red Team to avoid detection and blocking from sercurity products and Blue Team personnel. The Red Team may use tools and techniques that are opsec safe, meaning they will not try to generate "noise" on the network that may alert the Blue Team and instead fly under the radar. Evasion techniques, such as Windows API hooking for example, may be used against endpoint protection so that tools can be run that otherwise would be prevented. This concept is shown in this illustration by a Red Team robot sneaking into the Blue Team's castle while remaining undetected, staying out of the spot light. The robot's shirt says, "API Hook".</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="F"></a>Fuzzing</p>
-<p></p><br>
+<p>Fuzzing a service or input is a way in with Red Teams can look for and discover a vulnerability that may otherwise be unknown (Zero Day). Fuzzing inputs for example may lead to a Buffer Overflow, meaning the application didn't anticipate a large string as input and the user-supplied input bleeds over into other parts of memory which could lead to arbitrary code execution. Typically with fuzzing the intent it to see what breaks, which could indicate a vulnerability, so it is similar to a stress test to overload the target. This is demonstrated on the page by showing a Red Team robot overloading their circuitry with other equipment while "fuzzing" their hair.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="G"></a>Git Leaks</p>
-<p></p><br>
+<p>One method a Red Team member may use against a target is to enumerate Git responsitories for sensitive information that may be useful. This may include accidental historical commits that contain tokens or credentials that are hard coded or used in connection strings for the application to connect to third party services or databases, for example. This is shown in the illustration by a Red Team robot who is posing as a sanitation worker, going through the trash of the Blue Team, finding API tokens that were improperly discarded.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="H"></a>Heap Spray</p>
-<p></p><br>
+<p>A Heap Spray works by writing a series of bytes at various places in the heap, since the location of memory may be dynamic and not easily guessable. Like with a buffer overflow, spraying the heap may result in the execution of arbitrary code for the Red Team but is not a vulnerability by itself. This robot barber is using a spray can of "Heap" to spray into the memory of the captured robot and point to the EAX CPU register in order to reprogram the dragon-bot. This robot was orignally designed by the Red Team but was captured by the Blue Team and reverse engineered (See Reverse Engineer in the Blue Team book) to work for them. The Red Team is taking it back again with this Heap Spray attack.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="I"></a>Impersonation</p>
-<p></p><br>
+<p>Impersonation in when the Red Team uses account takeover to assume the identity of a valid, authorized user. This can be done in a variety of different ways, but token delegation is a common method on the domain. This robot is attempting to sneak into the Blue Team's environment by dressing up to pass as a dragon. This robot can also be seen on the "Drop Box" page after they succesfully gained access.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="J"></a>Juice Jacking</p>
-<p></p><br>
+<p>Juice Jacking is an attack in which a kiosk is designed to look like a USB charging station but really it accesses the data on the device. This can steal sensitive information or sideload malicious apps. In the illustration a Red Team robot is siphoning data from these devices while being hidden behind the kiosk.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="K"></a>Kali Linux</p>
-<p></p><br>
+<p>Kali Linux is a popular Linux distribution based on Debian for penetration testing. It is designed out-of-the-box with popular Cybersecurity applications and has a source repository with popular packages available for installation. A few wordlists are also available with the standard installation and this distro can be run from a Virtual Machine (VM) or live environment as well as some mobile devices, making it ideal for portability and a quick setup. This image is a shout-out to the Offensive Security folks as well as women in the Cybersecurity space, with the Women's Society of Cyberjutsu logo on the hacker hookie.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="L"></a>Listener</p>
-<p></p><br>
+<p>A Listener is simply a service set up to receive data on a Red Team user's host. This can be something more complex like a C2 framework, or simply a Netcat or Python service listening on a port. In this illustration a space rover is on the moon, listening for connections to be made. The "Need input" reference is a nod to a classic movie robot.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="M"></a>Man-in-the-Middle</p>
-<p></p><br>
+<p>A Man-in-the-Middle attack (MitM), is situation in which a Red Team member is positioned in between a client, or user, and a service. MitM techniques can be used to redirect this traffic to route through the Red Team host, while eavesdropping on or modifying the data in transit. In this illustration federal agents are performing a cellular "string ray" attack by monitoring a suspect's phone, remotely and discretely.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="N"></a>Nmap</p>
-<p></p><br>
+<p>Nmap, short for Network Mapper, is a very popular tool used for host discovery and service enumeration. It also has a scripting engine which makes the tool even more powerful and can perform vulnerability discovery, among other things. This illustration shows a robot pirate who has a treasure "map", containing a network diagram of devices.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="O"></a>OSINT</p>
-<p></p><br>
+<p>OSINT is short for Open-source Intelligence, and is a term used to describe the process of collecting information that is publicly available about a company, person, or other resource. OSINT techniques are used by the Red Team to learn more about their targets and this information can be levered in a larger-scale attack, such as phishing. This image depicts a robot investigator who is piecing together a series of clues to aid in an attack plan against the Blue Team's castle.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="P"></a>Proof of Concept</p>
-<p></p><br>
+<p>A Proof of Concept (PoC) in Cybersecurity is some code or an example of a specific payload that can prove a vulnerability exists and is exploitable. This PoC can often be weaponized into an exploit to be used in a dynamic fashion in a Red Team framework, and sometimes are publicly shared. Since PoCs are a type of prototype, being the intial draft of an exploit, this is reflected by showing a Red Team robot who is pieced together an in development. There are robot concept drawlings on the wall to show this is a work in progress.</p><br>
 
 <p style="color:black;font-size:46px;font-family:'Cooper Black';"><a name="Q"></a>Quality Reporting</p>
 <p></p><br>
