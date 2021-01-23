@@ -93,12 +93,6 @@
   border-radius: 3px 0 0 3px;
 }
 
-button {
-    /* sets border width to 0 and border style to none */ 
-    border:0 none;
-    background-color: #FFFFFF;
-}	
-	
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
@@ -200,7 +194,7 @@ function showSlides(n) {
 
 </select><br><br></td></tr>
 <tr><td><b><font color="red">To Add More Than One Type of Book "Add to Cart" and Then Hit "Continue Shopping" on the PayPal Cart Page</font></b><br><br></td></tr>
-<tr><td align="center"><div id="cover"><h2>ON BACKORDER!</h2>Currently Estimating Inventory Around Late-January 2021<br><br><img src="img/smallmalware.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div></td></tr>
+<tr><td align="center"><div id="cover"><h2>On Backorder Until February 2021!</h2><img src="img/smallmalware.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div></td></tr>
 
 	<tr><td align="center"><input type="hidden" name="on1" value="Quantity"><b>Quantity</b></td></tr><tr><td align="center">
 	<select id="totalcost" name="quantity"  onchange="GetSelectedTextValue(this)">
@@ -300,13 +294,13 @@ function showSlides(n) {
             var selectedText2 = changecover.options[changecover.selectedIndex].innerHTML;
             var selectedValue2 = changecover.value;
 			if (selectedValue2 == "M is for Malware") {
-			var imgsrc = "<h2>ON BACKORDER!</h2>Currently Estimating Inventory Around Late-January 2021<br><br><img src='img/smallmalware.jpg' onclick='openModal();currentSlide(1)' class='hover-shadow'>";
+			var imgsrc = "<h2>On Backorder Until February 2021!</h2><img src='img/smallmalware.jpg' onclick='openModal();currentSlide(1)' class='hover-shadow'>";
 			}
 			if (selectedValue2 == "B is for Blue Team") {
-			var imgsrc = "<h2>ON BACKORDER!</h2>Currently Estimating Inventory Around Late-January 2021<br><br><img src='img/smallblueteam.jpg' onclick='openModal();currentSlide(2)' class='hover-shadow'>";
+			var imgsrc = "<h2>On Backorder Until February 2021!</h2><img src='img/smallblueteam.jpg' onclick='openModal();currentSlide(2)' class='hover-shadow'>";
 			}
 			if (selectedValue2 == "R is for Red Team") {
-			var imgsrc = "<h2>ON BACKORDER!</h2>Currently Estimating Inventory Around Late-January 2021<br><br><img src='img/smallredteam.jpg' onclick='openModal();currentSlide(3)' class='hover-shadow'>";
+			var imgsrc = "<h2>On Backorder Until February 2021!</h2><img src='img/smallredteam.jpg' onclick='openModal();currentSlide(3)' class='hover-shadow'>";
 			}
 			
             document.getElementById("cover").innerHTML = imgsrc;
@@ -318,14 +312,10 @@ function showSlides(n) {
 
         }
     </script>  
-	<br><br>
-For more than 80 books please <a href="mailto:d81f2140@opayq.com">Email Me</a> for a custom quote!<br>
-
-<br>
-<br>
-<!--<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
-<input type="submit" name="submit" value="Add to Cart!">	
+	<br>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	
 </form>
 
 <div id="myModal" class="modal">
