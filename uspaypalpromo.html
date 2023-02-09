@@ -1,0 +1,385 @@
+<HEAD>
+<style>
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 33%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  background-color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  color: black;
+  font-size: 22px;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</HEAD>
+<BODY>
+<CENTER>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="PM87BJF2ZKSM4">
+<input type="hidden" name="upload" value="1">
+<table>
+	<tr><td align="center"><input type="hidden" name="on0" value="Book"><b>SELECT PROMO</b><br></td></tr>
+
+	<tr><td align="center">
+	<select name="os0" id="changecover" onchange="GetSelectedTextValue2(this)">
+	<option value="Buy 2 Gift 1 Red">Buy 2 Gift 1 Red Team </option>
+	<option value="Buy 2 Gift 1 Blue">Buy 2 Gift 1 Blue Team </option>
+	<option value="Limited Complete Set">Complete Series (Limited!) </option>
+
+</select><br><br></td></tr>
+<tr><td><b><font color="red">Only one promo per order, but you can add individual books to your order by clicking "Continue Shopping" on the PayPal cart page!</font></b><br><br></td></tr>
+	<tr><td align="center"><div id="cover"><h2><font color="red">Limted Inventory! (US-only at this time)</h2><img src="img/unfurl.png" class="hover-shadow"></div></td></tr>
+		<!--<tr><td align="center"><div id="cover"><h2>Limted Inventory! (US-only at this time)</h2><img src="img/smallmalware.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div></td></tr>-->
+
+	<tr><td align="center"><input type="hidden" name="on1" value="Quantity"><b>Quantity</b></td></tr><tr><td align="center">
+	<select id="totalcost" name="quantity"  onchange="GetSelectedTextValue(this)">
+		<option value="1">1 Set</option>
+<!--<option value="1">1 Book</option>
+<option value="2">2 Books</option>
+<option value="3">3 Books</option>
+<option value="4">4 Books</option>
+<option value="5">5 Books</option>
+<option value="6">6 Books</option>
+<option value="7">7 Books</option>
+<option value="8">8 Books</option>
+<option value="9">9 Books</option>
+<option value="10">10 Books</option>
+<option value="11">11 Books</option>
+<option value="12">12 Books</option>
+<option value="13">13 Books</option>
+<option value="14">14 Books</option>
+<option value="15">15 Books</option>
+<option value="16">16 Books</option>
+<option value="17">17 Books</option>
+<option value="18">18 Books</option>
+<option value="19">19 Books</option>
+<option value="20">20 Books</option>
+<option value="21">21 Books</option>
+<option value="22">22 Books</option>
+<option value="23">23 Books</option>
+<option value="24">24 Books</option>
+<option value="25">25 Books</option>
+<option value="26">26 Books</option>
+<option value="27">27 Books</option>
+<option value="28">28 Books</option>
+<option value="29">29 Books</option>
+<option value="30">30 Books</option>
+<option value="31">31 Books</option>
+<option value="32">32 Books</option>
+<option value="33">33 Books</option>
+<option value="34">34 Books</option>
+<option value="35">35 Books</option>
+<option value="36">36 Books</option>
+<option value="37">37 Books</option>
+<option value="38">38 Books</option>
+<option value="39">39 Books</option>
+<option value="40">40 Books</option>
+<option value="41">41 Books</option>
+<option value="42">42 Books</option>
+<option value="43">43 Books</option>
+<option value="44">44 Books</option>
+<option value="45">45 Books</option>
+<option value="46">46 Books</option>
+<option value="47">47 Books</option>
+<option value="48">48 Books</option>
+<option value="49">49 Books</option>
+<option value="50">50 Books</option>
+<option value="51">51 Books</option>
+<option value="52">52 Books</option>
+<option value="53">53 Books</option>
+<option value="54">54 Books</option>
+<option value="55">55 Books</option>
+<option value="56">56 Books</option>
+<option value="57">57 Books</option>
+<option value="58">58 Books</option>
+<option value="59">59 Books</option>
+<option value="60">60 Books</option>
+<option value="61">61 Books</option>
+<option value="62">62 Books</option>
+<option value="63">63 Books</option>
+<option value="64">64 Books</option>
+<option value="65">65 Books</option>
+<option value="66">66 Books</option>
+<option value="67">67 Books</option>
+<option value="68">68 Books</option>
+<option value="69">69 Books</option>
+<option value="70">70 Books</option>
+<option value="71">71 Books</option>
+<option value="72">72 Books</option>
+<option value="73">73 Books</option>
+<option value="74">74 Books</option>
+<option value="75">75 Books</option>
+<option value="76">76 Books</option>
+<option value="77">77 Books</option>
+<option value="78">78 Books</option>
+<option value="79">79 Books</option>
+<option value="80">80 Books</option>-->
+</select> </td></tr>
+</table>
+	<div id="price"><del>$44.97</del> <ins>$29.99</ins> + Shipping</div>
+	<script type="text/javascript">
+        function GetSelectedTextValue(totalcost) {
+            var selectedText = totalcost.options[totalcost.selectedIndex].innerHTML;
+            var selectedValue = totalcost.value;
+            document.getElementById("price").innerHTML = "$" + totalcost.value * 29.98 + " + Shipping";
+
+        }
+    </script>  
+<script type="text/javascript">
+        function GetSelectedTextValue2(changecover) {
+            var selectedText2 = changecover.options[changecover.selectedIndex].innerHTML;
+            var selectedValue2 = changecover.value;
+			if (selectedValue2 == "Buy 2 Gift 1 Blue") {
+			var imgsrc = "  <meta property='og:type' content='product'><meta property='og:title' content='LA 2019 UNISEX T-SHIRT'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:price:amount' content='26'><meta property='og:price:currency' content='USD'><h2>Still Available! (US-only at this time)</h2><img src='img/buy2gift1blue.jpg' class='hover-shadow'>";
+			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>(Please do a separate transaction for more than one set)";
+			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option>';
+			}
+			if (selectedValue2 == "Buy 2 Gift 1 Red") {
+			var imgsrc = "  <meta property='og:type' content='product'><meta property='og:title' content='LA 2019 UNISEX T-SHIRT'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:price:amount' content='26'><meta property='og:price:currency' content='USD'><h2>Still Available! (US-only at this time)</h2><img src='img/buy2gift1red.jpg' class='hover-shadow'>";
+			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>(Please do a separate transaction for more than one set)";
+			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option>';
+			}
+			if (selectedValue2 == "Limited Complete Set") {
+			var imgsrc = "  <meta property='og:type' content='product'><meta property='og:title' content='LA 2019 UNISEX T-SHIRT'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:price:amount' content='26'><meta property='og:price:currency' content='USD'><h2>Limted Inventory! (US-only at this time)</h2><img src='img/unfurl.png' class='hover-shadow' width=300>";
+			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>(Please do a separate transaction for more than one set)";
+			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option>';
+			}
+			
+            document.getElementById("cover").innerHTML = imgsrc;
+
+            var selectedText = totalcost.options[totalcost.selectedIndex].innerHTML;
+            var selectedValue = totalcost.value;
+            
+			
+        }
+    </script>  
+	<br>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	
+</form>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img/MalwareLarge.png" style="width:80%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img/BlueTeamLarge.png" style="width:80%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/RedTeamLarge.png" style="width:80%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/unfurl.png" style="width:80%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="img/smallmalware.jpg" onclick="currentSlide(1)" alt="M is for Malware - This book covers a broad area of Cybersecurity concepts! (The Original)">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img/smallblueteam.jpg" onclick="currentSlide(2)" alt="B is for Blue Team - This book is more focused on defensive security concepts!">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img/smallredteam.jpg" onclick="currentSlide(3)" alt="R is for Red Team - This book is more focused on offensive security concepts!">
+    </div>
+	  
+    <div class="column">
+      <img class="demo" src="img/unfurl.png" onclick="currentSlide(4)" alt="Complete Series - All 3 Books!">
+    </div>
+
+  </div>
+</div>
+	
+
+
+</CENTER>
+</BODY>
+</HTML>
