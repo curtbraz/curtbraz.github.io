@@ -199,7 +199,7 @@ function showSlides(n) {
 
 	<tr><td align="center"><input type="hidden" name="on1" value="Quantity"><b>Quantity</b></td></tr><tr><td align="center">
 	<select id="totalcost" name="quantity"  onchange="GetSelectedTextValue(this)">
-		<option value="1">1 Set</option>
+		<option value="1">1 Set</option><option value="2">2 Sets</option><option value="3">3 Sets</option>
 <!--<option value="1">1 Book</option>
 <option value="2">2 Books</option>
 <option value="3">3 Books</option>
@@ -297,18 +297,18 @@ function showSlides(n) {
             var selectedValue2 = changecover.value;
 			if (selectedValue2 == "Buy 2 Gift 1 Blue") {
 			var imgsrc = "  <meta property='og:type' content='product'><meta property='og:title' content='LA 2019 UNISEX T-SHIRT'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:price:amount' content='26'><meta property='og:price:currency' content='USD'><h2>Still Available! (US-only at this time)</h2><img src='img/buy2gift1blue.jpg' class='hover-shadow'>";
-			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>(Please do a separate transaction for more than one set)";
-			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option>';
+			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>";
+			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option><option value="2">2 Sets</option><option value="3">3 Sets</option>';
 			}
 			if (selectedValue2 == "Buy 2 Gift 1 Red") {
 			var imgsrc = "  <meta property='og:type' content='product'><meta property='og:title' content='LA 2019 UNISEX T-SHIRT'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:price:amount' content='26'><meta property='og:price:currency' content='USD'><h2>Still Available! (US-only at this time)</h2><img src='img/buy2gift1red.jpg' class='hover-shadow'>";
-			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>(Please do a separate transaction for more than one set)";
-			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option>';
+			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>";
+			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option><option value="2">2 Sets</option><option value="3">3 Sets</option>';
 			}
 			if (selectedValue2 == "Limited Complete Set") {
 			var imgsrc = "  <meta property='og:type' content='product'><meta property='og:title' content='LA 2019 UNISEX T-SHIRT'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b3bc4dd1_grande.png?v=1588191063'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-c47781a8_grande.png?v=1588191065'><meta property='og:image' content='http://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:image:secure_url' content='https://cdn.shopify.com/s/files/1/1110/4938/products/mockup-b7f5947c_grande.png?v=1588191067'><meta property='og:price:amount' content='26'><meta property='og:price:currency' content='USD'><h2>Limted Inventory! (US-only at this time)</h2><img src='img/unfurl.png' class='hover-shadow' width=300>";
-			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>(Please do a separate transaction for more than one set)";
-			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option>';
+			document.getElementById("price").innerHTML = "<del>$44.97</del> <ins>$29.99</ins> + Shipping<br>";
+			document.getElementById("totalcost").innerHTML = '<option value="1">1 Set</option><option value="2">2 Sets</option><option value="3">3 Sets</option>';
 			}
 			
             document.getElementById("cover").innerHTML = imgsrc;
