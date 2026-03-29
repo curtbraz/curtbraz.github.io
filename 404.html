@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="refresh" content="0; url=https://cybersecurityabcs.com/">
+  <script>
+    (function () {
+      var target = 'https://cybersecurityabcs.com' + window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a id="target" href="https://cybersecurityabcs.com/">cybersecurityabcs.com</a>...</p>
+  <script>
+    (function () {
+      var target = 'https://cybersecurityabcs.com' + window.location.pathname + window.location.search + window.location.hash;
+      document.getElementById('target').href = target;
+      document.getElementById('target').textContent = target;
+    })();
+  </script>
+</body>
+</html>
